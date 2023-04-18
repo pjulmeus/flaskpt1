@@ -1,2 +1,16 @@
-from flask import FLASK
-app = FLASK(__name__)
+from flask import Flask 
+
+app = Flask(__name__)
+
+@app.route('/welcome')
+def homepage():
+    return "welcome"
+
+@app.route('/welcome/back')
+def welcome_back():
+    return "welcome back"
+
+@app.route('/welcome/home')
+def welcome_home():
+    return "welcome home"
+
